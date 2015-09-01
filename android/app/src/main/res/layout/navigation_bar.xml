@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:id="@+id/navigation_bar"
+        style="@style/NavigationBarHeader">
+
+        <com.jarvis.android.view.AutoHighlightImageView
+            android:id="@+id/nav_left_button"
+            style="@style/NavigationButtonLeft"
+            android:icon="@mipmap/nav_drawer" />
+
+        <LinearLayout
+            android:id="@+id/nav_right_container"
+            style="@style/NavigationRightContainer" />
+
+        <TextView
+            android:id="@+id/nav_title"
+            style="@style/NavigationButtonTitle" />
+
+        <LinearLayout
+            android:id="@+id/nav_additional_container"
+            style="@style/NavigationAdditionalContainer"
+            android:layout_width="match_parent"
+            android:gravity="center" />
+    </RelativeLayout>
+</merge>

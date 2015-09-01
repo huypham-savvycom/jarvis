@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">android</string>
+    <!-- DATABASE -->
+    <string name="path_database">/data/data/%s/databases/</string>
+</resources>
