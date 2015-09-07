@@ -1,8 +1,14 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="@style/MaterialDesignLibraryTheme.Light">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="color">@android:color/white</item>
     </style>
 
     <style name="ProgressBarLoading">
@@ -21,8 +27,8 @@
     <!-- Navigation -->
     <style name="NavigationBarHeader">
         <item name="android:layout_width">match_parent</item>
-        <!--<item name="android:layout_height">@dimen/nav_bar_height</item>-->
-        <!--<item name="android:background">@color/bg_navigation_bar_new</item>-->
+        <item name="android:layout_height">@dimen/nav_bar_height</item>
+        <item name="android:background">@color/bg_navigation_bar_new</item>
     </style>
 
     <style name="NavigationButtonRight">
@@ -31,21 +37,21 @@
         <item name="android:layout_alignParentRight">true</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:background">@null</item>
-        <!--<item name="android:contentDescription">@string/app_description</item>-->
-        <!--<item name="android:paddingRight">@dimen/dip_12</item>-->
+        <item name="android:contentDescription">@string/app_description</item>
+        <item name="android:paddingRight">@dimen/dip_12</item>
     </style>
 
     <style name="NavigationButtonRight.TextView" parent="NavigationButtonRight">
-        <!--<item name="android:paddingLeft">@dimen/dip_10</item>-->
-        <!--<item name="android:paddingTop">@dimen/dip_10</item>-->
-        <!--<item name="android:paddingBottom">@dimen/dip_10</item>-->
-        <!--<item name="android:textColor">@color/zk_heart</item>-->
+        <item name="android:paddingLeft">@dimen/dip_10</item>
+        <item name="android:paddingTop">@dimen/dip_10</item>
+        <item name="android:paddingBottom">@dimen/dip_10</item>
+        <item name="android:textColor">@color/zk_heart</item>
     </style>
 
     <style name="NavigationButtonRight.ImageView" parent="NavigationButtonRight">
-        <!--<item name="android:paddingLeft">@dimen/dip_2</item>-->
-        <!--<item name="android:paddingTop">@dimen/dip_12</item>-->
-        <!--<item name="android:paddingBottom">@dimen/dip_12</item>-->
+        <item name="android:paddingLeft">@dimen/dip_2</item>
+        <item name="android:paddingTop">@dimen/dip_12</item>
+        <item name="android:paddingBottom">@dimen/dip_12</item>
     </style>
 
     <style name="NavigationButtonLeft">
@@ -54,6 +60,8 @@
         <item name="android:layout_alignParentLeft">true</item>
         <item name="android:layout_centerVertical">true</item>
         <item name="android:background">@null</item>
+        <item name="android:contentDescription">@string/app_description</item>
+        <item name="android:padding">@dimen/dip_12</item>
     </style>
 
     <style name="NavigationButtonTitle">
@@ -62,8 +70,10 @@
         <item name="android:layout_gravity">center</item>
         <item name="android:ellipsize">end</item>
         <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/dip_5</item>
         <item name="android:layout_centerInParent">true</item>
         <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/zk_heart</item>
         <item name="android:textSize">21sp</item>
     </style>
 

@@ -1,4 +1,489 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#ffffff</color>
+    <color name="color_primary">#e64e40</color>
+    <color name="color_primary_dark">#c94438</color>
+    <color name="activity_main_row_title_color">#cccccc</color>
+
+    <color name="cyan">#00FFFF</color>
+    <color name="gray">#bdbdbd</color>
+
+
+
+    <!-- Zaka Theme -->
+    <color name="zk_black_cc">#CC000000</color>
+    <color name="zk_black">#000000</color>
+    <color name="zk_white">#ffffff</color>
+    <color name="zk_heart">#ef4b3f</color>
+    <color name="zk_dark_gray">#6b6667</color>
+    <color name="zk_light_gray">#c5c3bd</color>
+    <color name="zk_separator_gray">#e7e7e7</color>
+    <color name="zk_blue">#51bbeb</color>
+    <color name="zk_text_field">#13161d</color>
+    <color name="zk_main">#0092ff</color>
+    <color name="zk_item_selection">#f2f9ff</color>
+    <color name="zk_green">#3cbca6</color>
+    <color name="zk_54">#545454</color>
+    <color name="zk_bk_light_gray">#ffe6e7e7</color>
+
+    <!-- App's Colors -->
+    <color name="bg_navigation_bar">#0092ff</color>
+    <color name="bg_navigation_bar_new">#FFFFFF</color>
+    <color name="zk_black_60">#99000000</color>
+    <color name="bg_navigation_bottom">#25292c</color>
+    <color name="bg_navigation_bottom_selected">#070809</color>
+    <color name="i_text_color">#3a3a3a</color>
+    <color name="i_white_60">#99ffffff</color>
+    <color name="i_heart_local">#ef4b3f</color>
+    <color name="i_heart_local_menu">#33ef4b3f</color>
+    <color name="black">#000000</color>
+    <color name="black_10">#19000000</color>
+    <color name="black_30">#4C000000</color>
+    <color name="black_60">#99000000</color>
+    <color name="black_40">#66000000</color>
+    <color name="black_50">#80000000</color>
+    <color name="black_80">#C8000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="border_rounded">#e0e0e0</color>
+
+    <color name="deal_divider">#d7d7d7</color>
+    <color name="light_theme_divider">#CCCCCC</color>
+    <color name="purple">#c1cae2</color>
+
+    <!-- Splash Screen -->
+    <color name="bg_splash">#ff0092ff</color>
+
+    <!-- Screen.HomeFeed -->
+    <color name="homefeed_status_bar">#0092ff</color>
+    <color name="homefeed_navigation_bar">#0092ff</color>
+    <color name="homefeed_bg">#f4f4f4</color>
+    <color name="homefeed_time">#999999</color>
+    <color name="homefeed_date">#999999</color>
+
+    <!-- Screen.HomeFeed.PhotoPost.Friend -->
+    <color name="homefeed_photopost_number_of_likes">#ffffff</color>
+    <color name="homefeed_photopost_place_info_overlay">#66000000</color>
+    <color name="homefeed_photopost_place_name">#ffffff</color>
+    <color name="homefeed_photopost_place_location">#f6f5f0</color>
+    <color name="homefeed_photopost_place_desc">#5b5b5b</color>
+    <color name="homefeed_photopost_read_more">#999999</color>
+    <color name="homefeed_photopost_number_of_comments">#3b3b3b</color>
+    <color name="homefeed_photopost_comments">#5b5b5b</color>
+    <color name="homefeed_photopost_additional_comments_circle">#5b5b5b</color>
+    <color name="homefeed_photopost_additional_comments_number_of_text">#ffffff</color>
+
+    <!-- Screen.HomeFeed.PhotoPost.Multiple -->
+    <color name="homefeed_photopost_name">#3b3b3b</color>
+    <color name="homefeed_photopost_subhead">#5b5b5b</color>
+    <color name="homefeed_photopost_view_all">#5b5b5b</color>
+    <color name="homefeed_photopost_bottom_bar">#18b6a1</color>
+
+    <!-- Screen.HomeFeed.GoodiePost -->
+    <color name="homefeed_goodiepost_place_name">#3b3b3b</color>
+    <color name="homefeed_goodiepost_days_remaining">#ffffff</color>
+    <color name="homefeed_goodiepost_days_remaining_bg">#5b5b5b</color>
+    <color name="homefeed_goodiepost_deal_title">#3b3b3b</color>
+    <color name="homefeed_goodiepost_deal_desc">#5b5b5b</color>
+    <color name="homefeed_goodiepost_deal_text_bg_box">#f4f4f4</color>
+    <color name="homefeed_goodiepost_bottom_color_bar">#5bcf68</color>
+
+    <!-- Screen.HomeFeed.ReferralPost -->
+    <color name="homefeed_referralpost_friend_name">#3b3b3b</color>
+    <color name="homefeed_referralpost_subhead">#5b5b5b</color>
+    <color name="homefeed_referralpost_place_name">#ffffff</color>
+    <color name="homefeed_referralpost_place_address">#f6f5f0</color>
+    <color name="homefeed_referralpost_number_of_miles_away">#ffffff</color>
+    <color name="homefeed_referralpost_miles_away">#ffffff</color>
+    <color name="homefeed_referralpost_place_info_bar_bg">#5b5b5b</color>
+    <color name="homefeed_referralpost_business_hour">#5b5b5b</color>
+    <color name="homefeed_referralpost_rating">#5b5b5b</color>
+    <color name="homefeed_referralpost_number_of_rating">#3b3b3b</color>
+    <color name="homefeed_referralpost_subhead_info_bar_bg">#f4f4f4</color>
+    <color name="homefeed_referralpost_desc">#5b5b5b</color>
+    <color name="homefeed_referralpost_read_more">#999999</color>
+    <color name="homefeed_referralpost_number_of_photos">#5b5b5b</color>
+    <color name="homefeed_referralpost_more_photos">#5b5b5b</color>
+    <color name="homefeed_referralpost_friends_with_this_place">#5b5b5b</color>
+    <color name="homefeed_referralpost_additional_number_of_friends">#f4f4f4</color>
+    <color name="homefeed_referralpost_outer_boarder">#3b3b3b</color>
+    <color name="homefeed_referralpost_bottom_color_bar">#ffb64d</color>
+
+    <!-- Screen.Notification -->
+    <color name="notification_cell_desc">#5b5b5b</color>
+    <color name="notification_cell_timestamp">#5b5b5b</color>
+    <color name="notification_status_bar">#0092ff</color>
+    <color name="notification_navi_bar">#0092ff</color>
+    <color name="notification_cell_text_friend_notification_text">#5b5b5b</color>
+    <color name="notification_cell_text_timestamp">#5b5b5b</color>
+    <color name="notification_like_indicator">#ff174c</color>
+    <color name="notification_comment_indicator">#5bcf6b</color>
+    <color name="notification_friend_request_indicator">#305682</color>
+    <color name="notification_message_indicator">#4db8f6</color>
+
+
+    <!-- Place.StatusBar-->
+    <color name="place_status_bar">#0092ff</color>
+    <!-- Place.NaviBar-->
+    <color name="place_navi_bar">#0092ff</color>
+    <!-- Place.TabBarUpper(Nearby,New,Accepted)-->
+    <color name="place_tab_bar_upper_selected_section_title">#3b3b3b</color>
+    <color name="place_tab_bar_upper_normal_selection_title">#999999</color>
+    <color name="place_tab_bar_upper_selected_section_highlight">#0092ff</color>
+    <color name="place_tab_bar_upper_bottom_divider_line">#5b5b5b</color>
+    <!-- Place.DealsListsTabs-->
+    <color name="deals_lists_tabs_place_name">#3b3b3b</color>
+    <color name="deals_lists_tabs_deal_title">#3b3b3b</color>
+    <color name="deals_lists_tabs_deal_desc">#5b5b5b</color>
+    <color name="deals_lists_tabs_num_days_left">#5b5b5b</color>
+    <color name="deals_lists_tabs_days_left_text">#5b5b5b</color>
+    <color name="deals_lists_num_miles_away">#999999</color>
+    <color name="deals_lists_miles_away_text">#999999</color>
+    <color name="deals_lists_miles_away_area_bg">#f4f4f4</color>
+    <!-- Place.SingleDealView-->
+    <color name="single_deal_view_place_name">#3b3b3b</color>
+    <color name="single_deal_view_place_loc">#5b5b5b</color>
+    <color name="single_deal_view_place_info_area_bg">#f4f4f4</color>
+    <color name="single_deal_view_deal_title">#3b3b3b</color>
+    <color name="single_deal_view_num_days_left">#ffffff</color>
+    <color name="single_deal_view_days_left_text">#ffffff</color>
+    <color name="single_deal_view_deal_desc">#5b5b5b</color>
+    <!-- Place.AcceptDeclineButtons-->
+    <color name="accept_decline_button_text">#ffffff</color>
+    <color name="accept_decline_button_decline_button">#ee4c3f</color>
+    <color name="accept_decline_button_accept_button">#5bcf68</color>
+    <color name="accept_decline_button_accept_decline_button_borders">#d7d7d7</color>
+    <color name="accept_decline_button_area_bg">#f4f4f4</color>
+    <!-- Place.AcceptedDealBar-->
+    <color name="accepted_deal_bar_accepted_text">#f4f4f4</color>
+    <color name="accepted_deal_bar_present_this_text">#ffffff</color>
+    <color name="accepted_deal_bar_accepted_area_bg">#5bcf68</color>
+    <!-- Place.DeclineDealPopup-->
+    <color name="decline_deal_popup_headline">#3b3b3b</color>
+    <color name="decline_deal_popup_subhead_text">#999999</color>
+    <color name="decline_deal_popup_cancel_button_text">#ffffff</color>
+    <color name="decline_deal_popup_cancel_button">#5b5b5b</color>
+    <color name="decline_deal_popup_decline_button_text">#ffffff</color>
+    <color name="decline_deal_popup_decline_button">#ee4c3f</color>
+
+    <!-- Screen.ForgotPassword -->
+    <color name="forgot_password_text">#5b5b5b</color>
+    <color name="forgot_password_enter_the_email">#5b5b5b</color>
+    <color name="forgot_password_email_input_box">#f4f4f4</color>
+    <color name="forgot_password_send_button">#5b5b5b</color>
+    <color name="forgot_password_send_button_text">#ffffff</color>
+    <color name="forgot_password_an_email_has_been_sent">#5b5b5b</color>
+    <color name="forgot_password_continue_button_text">#ffffff</color>
+    <color name="forgot_password_container">#5b5b5b</color>
+    <color name="forgot_password_back_button_text">#5b5b5b</color>
+    <color name="forgot_password_back_button_container">#f4f4f4</color>
+    <color name="forgot_password_enter_your_new_password">#5b5b5b</color>
+    <color name="forgot_password_set_new_password_button_text">#ffffff</color>
+    <color name="forgot_password_set_new_password_button_container">#5b5b5b</color>
+
+    <!-- Screen.FriendProfile -->
+    <color name="friend_profile_status_bar">#0092ff</color>
+    <color name="friend_profile_nav_bar">#0092ff</color>
+    <color name="friend_profile_top_tab_bar_bg">#ffffff</color>
+    <color name="friend_profile_top_tab_bar_selected_tab">#000000</color>
+    <color name="friend_profile_top_tab_bar_unselected_tabs">#999999</color>
+    <color name="friend_profile_data_numbers">#ffffff</color>
+    <color name="friend_profile_data_words">#ffffff</color>
+    <color name="friend_profile_friend_request_button_text">#4db8f6</color>
+    <color name="friend_profile_friend_request_button_button">#5b5b5b</color>
+    <color name="friend_profile_friend_request_pending_button_text">#999999</color>
+    <color name="friend_profile_friend_request_pending_button">#5b5b5b</color>
+    <color name="friend_profile_friend_request_confirmed_button_text">#5bcf68</color>
+    <color name="friend_profile_friend_request_confirmed_button">#5b5b5b</color>
+    <color name="friend_profile_places_list_place_name">#ffffff</color>
+    <color name="friend_profile_places_list_category">#5b5b5b</color>
+    <color name="friend_profile_places_list_sidebar">#0092ff</color>
+    <color name="friend_profile_alphabetical_dividers">#ffffff</color>
+    <color name="friend_profile_friends_friend_name">#000000</color>
+    <color name="friend_profile_friends_city_and_state">#999999</color>
+    <color name="friend_profile_friend_requests_friend_name">#000000</color>
+    <color name="friend_profile_friend_requests_city_and_state">#999999</color>
+    <color name="friend_profile_people_in_your_contacts_bar">#999999</color>
+    <color name="friend_profile_people_in_your_contacts_text">#ffffff</color>
+
+    <!-- Screen.FriendProfile.Settings -->
+    <color name="friend_profile_settings_category_titles">#5b5b5b</color>
+    <color name="friend_profile_settings_button_text">#000000</color>
+    <color name="friend_profile_settings_visibility_settings_text">#999999</color>
+
+    <!-- Screen.Login -->
+    <!-- deprecated BEGIN -->
+    <color name="login_btn">#ff6098</color>
+    <color name="login_btn_highlight">#c13365</color>
+    <color name="login_fb_btn">#3b5998</color>
+    <color name="login_fb_btn_highlight">#203562</color>
+    <color name="login_sign_up">#878788</color>
+    <color name="login_divider">#828797</color>
+    <!-- deprecated END -->
+    <color name="login_main_login_button">#0092ff</color>
+    <color name="login_main_bottom_text">#ffffff</color>
+    <color name="login_on_boarding_skip_login_button_text">#d7d7d7</color>
+    <color name="login_on_boarding_skip_login_button">#5b5b5b</color>
+    <color name="login_on_boarding_next_signup_button_text">#3b3b3b</color>
+    <color name="login_on_boarding_next_signup_button">#999999</color>
+    <color name="login_on_boarding_button_area_bg">#3b3b3b</color>
+    <color name="login_on_boarding_active_progress_circle">#0092ff</color>
+    <color name="login_on_boarding_normal_progress_circle">#ffffff</color>
+
+    <!-- Screen.SignUp-->
+    <!-- deprecated BEGIN -->
+    <color name="sign_up_divider">#c1cae1</color>
+    <color name="sign_up_text">#888</color>
+    <color name="sign_up_error">#f00</color>
+    <color name="bg_sign_up">#ebeef2</color>
+    <color name="sign_up_text_intro">#575758</color>
+    <!-- deprecated END -->
+    <color name="signup_enter_mobile_num">#ffffff</color>
+    <color name="signup_next_and_canel_button_text">#5b5b5b</color>
+    <color name="signup_container">#f4f4f4</color>
+    <color name="signup_sign_up_with_zaka">#0092ff</color>
+    <color name="signup_by_signing_up">#ffffff</color>
+    <color name="signup_back_button_text">#5b5b5b</color>
+    <color name="signup_thanks_for_signing_up">#ffffff</color>
+    <color name="signup_click_the_target">#ffffff</color>
+    <color name="signup_without_access">#ffffff</color>
+    <color name="signup_next_button_text">#5b5b5b</color>
+    <color name="signup_next_container">#f4f4f4</color>
+    <color name="signup_skip_button_text">#5b5b5b</color>
+    <color name="signup_skip_button_container">#f4f4f4</color>
+    <color name="signup_your_current_location_is">#ffffff</color>
+
+    <!-- Screen.PlaceProfile -->
+    <!-- deprecated BEGIN -->
+    <color name="place_item_selection">#f2f9ff</color>
+    <color name="place_item_header_list_bg">#ebebec</color>
+    <color name="place_item_header_list_text">#80caec</color>
+    <color name="place_item_businessname_lable">#7f090021</color>
+    <color name="place_item_fullname_lable">#7f090022</color>
+    <color name="place_profile_alphabet_item">#0e81ff</color>
+    <color name="place_profile_share_bg">#f4f4f4</color>
+    <!-- deprecated END -->
+    <color name="place_profile_status_bar">#0092ff</color>
+    <color name="place_profile_navi">#0092ff</color>
+    <color name="place_profile_navi_title">#ffffff</color>
+    <color name="place_profile_place_main_info_place_name">#3b3b3b</color>
+    <color name="place_profile_place_main_info_address">#5b5b5b</color>
+    <color name="place_profile_place_main_info_bg">#f4f4f4</color>
+    <color name="place_profile_tab_bar_upper_selected_section_title">#3b3b3b</color>
+    <color name="place_profile_tab_bar_upper_normal_section_title">#999999</color>
+    <color name="place_profile_tab_bar_upper_selected_section_highlight">#0092ff</color>
+    <color name="place_profile_tab_bar_upper_bottom_divider_line">#5b5b5b</color>
+    <color name="place_profile_tab_desc_text">#3b3b3b</color>
+    <color name="place_profile_tab_rating_text">#999999</color>
+    <color name="place_profile_tab_rating_num">#5b5b5b</color>
+    <color name="place_profile_tab_rating_button_bg">#f4f4f4</color>
+    <color name="place_profile_tab_share_text">#999999</color>
+    <color name="place_profile_tab_share_button_bg">#f4f4f4</color>
+    <color name="place_profile_tab_button_divder_line">#999999</color>
+    <color name="place_profile_tab_button_pressed_bg">#f4f4f4</color>
+    <color name="place_profile_tab_call_button_headline_text">#5b5b5b</color>
+    <color name="place_profile_tab_call_button_num_text">#5b5b5b</color>
+    <color name="place_profile_tab_directions_button_headline_text">#5b5b5b</color>
+    <color name="place_profile_tab_directions_button_address_text">#5b5b5b</color>
+    <color name="place_profile_tab_website_address_button_text">#5b5b5b</color>
+    <color name="place_profile_tab_hours_of_op_button_headline_text">#5b5b5b</color>
+    <color name="place_profile_tab_hours_of_op_subhead_text">#5b5b5b</color>
+    <color name="place_profile_photos_tab_filter_button_text">#ffffff</color>
+
+    <!-- Screen.PhotoView.PlaceProfile -->
+    <color name="photoview_place_profile_status_bar">#0092ff</color>
+    <color name="photoview_place_profile_navi_bar">#0092ff</color>
+    <color name="photoview_place_profile_title">#ffffff</color>
+    <color name="photoview_friend_name">#3b3b3b</color>
+    <color name="photoview_time_stamp">#5b5b5b</color>
+    <color name="photoview_date_stamp">#5b5b5b</color>
+    <color name="photoview_likes_container">#f4f4f4</color>
+    <color name="photoview_number_likes_text">#5b5b5b</color>
+    <color name="photoview_likes_text">#5b5b5b</color>
+    <color name="photoview_place_name">#3b3b3b</color>
+    <color name="photoview_place_location">#5b5b5b</color>
+    <color name="photoview_place_info_bg">#f4f4f4</color>
+    <color name="photoview_photo_desc">#5b5b5b</color>
+    <color name="photoview_comments_upper_divder">#d7d7d7</color>
+    <color name="photoview_number_of_comments">#3b3b3b</color>
+    <color name="photoview_comments_text">#5b5b5b</color>
+    <color name="photoview_likes_view_title">#3b3b3b</color>
+    <color name="photoview_likes_view_title_divider_line">#d7d7d7</color>
+    <color name="photoview_likes_view_friend_name">#3b3b3b</color>
+    <color name="photoview_likes_view_time_and_date_stamp">#999999</color>
+    <color name="photoview_likes_view_friend_divider_line">#f4f4f4</color>
+    <color name="photoview_comments_view_title">#3b3b3b</color>
+    <color name="photoview_comments_view_title_divider_line">#d7d7d7</color>
+    <color name="photoview_comments_view_friend_name">#3b3b3b</color>
+    <color name="photoview_comments_view_time_and_date_stamp">#999999</color>
+    <color name="photoview_comments_view_friend_divider_line">#f4f4f4</color>
+    <color name="photoview_comments_view_comment_here_text">#3b3b3b</color>
+    <color name="photoview_comments_view_new_comment_area_bg">#f4f4f4</color>
+    <color name="photoview_comments_view_send_button_text">#5b5b5b</color>
+
+    <!-- Screen.Search -->
+    <!-- deprecated BEGIN -->
+    <color name="bg_search_view">#f1f0ec</color>
+    <color name="search_view_text_button">#8e8e93</color>
+    <color name="search_view_divider">#e7e6e0</color>
+    <color name="search_view_expand">#c2c9e1</color>
+    <!-- deprecated END -->
+    <color name="search_status_bar">#0092ff</color>
+    <color name="search_navi_bar">#0092ff</color>
+    <color name="search_search_text">#ffffff</color>
+    <color name="search_bg">#f4f4f4</color>
+    <color name="search_tab_bar_upper_selected_section_title">#3b3b3b</color>
+    <color name="search_tab_bar_upper_normal_section_title">#999999</color>
+    <color name="search_tab_bar_upper_selected_section_highlight">#0092ff</color>
+    <color name="search_tab_bar_upper_bottom_divider_line">#5b5b5b</color>
+    <color name="search_places_tab_location_input_near_text">#5b5b5b</color>
+    <color name="search_places_tab_current_location_text">#999999</color>
+    <color name="search_places_tab_location_area_bg">#d7d7d7</color>
+    <color name="search_places_tab_my_places_text">#999999</color>
+    <color name="search_places_tab_discovered_places_text">#999999</color>
+    <color name="search_places_tab_place_name">#ffffff</color>
+    <color name="search_places_tab_place_address">#f6f5f0</color>
+    <color name="search_places_tab_number_of_miles_away">#ffffff</color>
+    <color name="search_places_tab_places_info_bar_bg">#5b5b5b</color>
+    <color name="search_places_tab_business_hours_text">#5b5b5b</color>
+    <color name="search_places_tab_rating_text">#5b5b5b</color>
+    <color name="search_places_tab_rating_number">#3b3b3b</color>
+    <color name="search_places_tab_subhead_info_bar_bg">#f4f4f4</color>
+    <color name="search_places_tab_desc_text">#5b5b5b</color>
+    <color name="search_places_tab_read_more_text">#999999</color>
+    <color name="search_places_tab_number_of_more_photos">#5b5b5b</color>
+    <color name="search_places_tab_more_photos_text">#5b5b5b</color>
+    <color name="search_places_tab_friends_with_this_place">#5b5b5b</color>
+    <color name="search_places_tab_additional_number_friends_text">#f4f4f4</color>
+    <color name="search_places_tab_outer_border">#f4f4f4</color>
+    <color name="search_places_tab_bottom_color_bar">#999999</color>
+    <color name="search_friends_tab_friend_name">#3b3b3b</color>
+    <color name="search_friends_tab_friend_location">#5b5b5b</color>
+    <color name="search_friends_tab_friend_divider_line">#d7d7d7</color>
+    <color name="search_friends_tab_recent_activity_text">#5b5b5b</color>
+    <color name="search_friends_tab_recent_activity_bg">#f4f4f4</color>
+    <color name="search_friends_tab_we_think_you_may_know_text">#ffffff</color>
+    <color name="search_friends_tab_suggested_friend_divider_bg">#999999</color>
+    <color name="search_friends_tab_friends_in_common_text">#999999</color>
+    <color name="search_friends_tab_friends_in_common_bg">#f4f4f4</color>
+    <color name="search_friends_tab_unfollow_button_text">#5b5b5b</color>
+    <color name="search_friends_tab_unfollow_button">#d7d7d7</color>
+    <color name="search_friends_tab_follow_button_text">#ffffff</color>
+    <color name="search_friends_tab_follow_button">#305682</color>
+
+    <!-- Screen.UserProfile -->
+    <color name="user_profile_status_bar">#0092ff</color>
+    <color name="user_profile_navi_bar">#0092ff</color>
+    <color name="user_profile_top_tab_bar_bg">#ffffff</color>
+    <color name="user_profile_top_tab_bar_selected_tab">#000000</color>
+    <color name="user_profile_top_tab_bar_unselected_tabs">#999999</color>
+    <color name="user_profile_data_numbers">#ffffff</color>
+    <color name="user_profile_data_words">#ffffff</color>
+    <color name="user_profile_places_list_places_name">#ffffff</color>
+    <color name="user_profile_places_list_category">#5b5b5b</color>
+    <color name="user_profile_places_list_sidebar">#0092ff</color>
+    <color name="user_profile_places_list_alphabetical_dividers">#ffffff</color>
+    <color name="user_profile_friends_friend_name">#000000</color>
+    <color name="user_profile_friends_city_and_state">#999999</color>
+    <color name="user_profile_friends_requests_friend_name">#000000</color>
+    <color name="user_profile_friends_requests_city_state">#999999</color>
+    <color name="user_profile_friends_requests_accepted_status">#4db8f6</color>
+    <color name="user_profile_friends_requests_friend_request_sent_status">#305682</color>
+    <color name="user_profile_friends_requests_people_in_your_contacts_bar">#999999</color>
+    <color name="user_profile_friends_requests_people_in_your_contacts_text">#ffffff</color>
+    <color name="user_profile_settings_category_titles_text">#5b5b5b</color>
+    <color name="user_profile_settings_button_text">#000000</color>
+    <color name="user_profile_settings_visibility_settings_text">#999999</color>
+    <color name="user_profile_place_privacy_lock_places_text">#5b5b5b</color>
+    <color name="user_profile_place_privacy_place_name">#000000</color>
+
+    <!-- Screen.MessageCenter -->
+    <color name="message_center_message_divider">#dedede</color>
+    <color name="message_center_status_bar">#0092ff</color>
+    <color name="message_center_navi_bar">#0092ff</color>
+    <color name="message_center_navi_bar_text">#ffffff</color>
+    <color name="message_center_inbox_view_top_tab_bar_bg">#ffffff</color>
+    <color name="message_center_inbox_view_top_tab_bar_selected_Tab">#000000</color>
+    <color name="message_center_inbox_view_top_tab_bar_unselected_tabs">#999999</color>
+    <color name="message_center_inbox_view_unread_message_cell_name">#000000</color>
+    <color name="message_center_inbox_view_unread_message_cell_subject">#000000</color>
+    <color name="message_center_inbox_view_unread_message_cell_preview_text">#5b5b5b</color>
+    <color name="message_center_inbox_view_unread_message_cell_time_stamp">#0092ff</color>
+    <color name="message_center_inbox_view_read_message_cell_name">#000000</color>
+    <color name="message_center_inbox_view_read_message_cell_subject">#5b5b5b</color>
+    <color name="message_center_inbox_view_read_message_cell_preview_text">#999999</color>
+    <color name="message_center_inbox_view_read_message_cell_time_stamp">#999999</color>
+    <color name="message_center_compose_menu_overlay_send_text">#000000</color>
+    <color name="message_center_compose_message_to_subject_body_text">#000000</color>
+    <color name="message_center_compose_recipient">#0092ff</color>
+    <color name="message_center_recipient_referral_lists_place_name">#ffffff</color>
+    <color name="message_center_recipient_referral_lists_category_city_state">#5b5b5b</color>
+    <color name="message_center_recipient_referral_lists_sidebar">#0092ff</color>
+    <color name="message_center_recipient_referral_lists_alpha_divider">#ffffff</color>
+    <color name="message_center_view_message_to_subject_body">#000000</color>
+    <color name="message_center_view_message_recipient">#0092ff</color>
+    <color name="message_center_view_message_timestamp">#999999</color>
+    <color name="message_center_reply_to_subject_body">#000000</color>
+    <color name="message_center_reply_recipient">#0092ff</color>
+    <color name="message_center_reply_timestamp">#999999</color>
+    <color name="message_center_reply_original_message_text">#999999</color>
+    <color name="message_center_view_referral_to_subject_body">#000000</color>
+    <color name="message_center_view_referral_recipient">#0092ff</color>
+    <color name="message_center_view_referral_timestamp">#999999</color>
+    <color name="message_center_view_referral_original_message_text">#999999</color>
+    <color name="message_center_view_referral_place_name">#ffffff</color>
+    <color name="message_center_view_referral_address">#ffffff</color>
+    <color name="message_center_view_referral_distance_number">#ffffff</color>
+    <color name="message_center_view_referral_distance_text">#ffffff</color>
+    <color name="message_center_view_referral_open_now">#5b5b5b</color>
+    <color name="message_center_view_referral_rating">#5b5b5b</color>
+
+
+    <!-- DashBoard -->
+    <color name="dashboard_explore_item_name">#064783</color>
+    <color name="dashboard_explore_item_photo">#1affffff</color>
+    <color name="dashboard_news_item_accept">#006c1a</color>
+    <color name="dashboard_header_merchant_label">#8fff</color>
+    <color name="dashboard_explore_search">#336f9f</color>
+
+    <!-- Rate Merchant -->
+    <color name="rate_merchant_desc">#959caf</color>
+
+    <!-- Settings -->
+    <color name="setting_item_text">#4c4f58</color>
+
+    <!--Referral-->
+    <color name="referral_status_not_interested">#f4989e</color>
+    <color name="referral_status_not_accepted">#5ef0a6</color>
+    <color name="bg_add_referral">#aa000000</color>
+
+    <!-- Categories -->
+    <color name="categories_sub_selected_item">#3da7f5</color>
+    <color name="categories_sub_item">#80beea</color>
+    <color name="categories_item">#a4abbe</color>
+    <color name="categories_divider">#bbc4da</color>
+    <color name="categories_item_group">#697277</color>
+
+    <!-- Place Photo -->
+    <color name="merchant_photo_date">#78b3dd</color>
+    <color name="bg_merchant_photo">#78b3dd</color>
+
+
+    <!-- Dialog -->
+    <color name="dialog_facebook_zipcode_divider">#998899</color>
+
+
+    <!-- Menu -->
+    <color name="bg_menu">#222222</color>
+
+    <!-- Place Profile -->
+
+    <color name="google_plus_red">#fe6a5e</color>
+    <!-- Not Now Button-->
+    <color name="not_now_button">#55595c</color>
+    <color name="ok_button">#0092fe</color>
+    <color name="title_place_added">#5e5d62</color>
+    <color name="campaign_count">#44B0F5</color>
+    <color name="drop_menu_text">#3b3b3b</color>
+    <!-- Photo View -->
+    <color name="like_bg">#f4f4f4</color>
 </resources>
