@@ -71,24 +71,9 @@ public enum AppDb {
         public void onCreate(SQLiteDatabase db) {
             db.beginTransaction();
             try {
-                db.execSQL(Schema.CREATE_ALBUM_TABLE);
-                db.execSQL(Schema.CREATE_BUSINESS_TABLE);
-                db.execSQL(Schema.CREATE_CONTACT_TABLE);
-                db.execSQL(Schema.CREATE_CUSTOMER_PROFILES_TABLE);
-                db.execSQL(Schema.CREATE_DEAL_TABLE);
-                db.execSQL(Schema.CREATE_MAIN_CATEGORY_TABLE);
-                db.execSQL(Schema.CREATE_VENDER_CATEGORY_TABLE);
-                db.execSQL(Schema.CREATE_MERCHANT_TABLE);
-                db.execSQL(Schema.CREATE_MESSAGE_TABLE);
-                db.execSQL(Schema.CREATE_NON_ZAKA_MERCHANT_TABLE);
-                db.execSQL(Schema.CREATE_NOTIFICATION_TABLE);
-                db.execSQL(Schema.CREATE_REFERRAL_TABLE);
-                db.execSQL(Schema.CREATE_SUB_CATEGORY_TABLE);
-                db.execSQL(Schema.CREATE_USER_TABLE);
-                db.execSQL(Schema.CREATE_DB_INFO_TABLE);
-                db.execSQL(Schema.CREATE_FRIEND_REQUEST_TABLE);
-                db.execSQL(Schema.CREATE_NEWS_FEED_TABLE);
-
+                db.execSQL(Schema.CREATE_PAGE_TABLE);
+                db.execSQL(Schema.CREATE_POST_TABLE);
+                db.execSQL(Schema.CREATE_COMMENT_TABLE);
                 db.setTransactionSuccessful();
             } finally {
                 db.endTransaction();
@@ -97,23 +82,9 @@ public enum AppDb {
 
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.ALBUM_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.BUSINESS_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.CONTACT_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.CUSTOMER_PROFILE_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.DEAL_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.MAIN_CATEGORY_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.VENDER_CATEGORY_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.MERCHANT_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.MESSAGE_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.NON_ZAKA_MERCHANT_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.NOTIFICATION_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.REFERRAL_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.SUB_CATEGORY_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.USER_NAME_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.DB_INFO_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.DB_FRIEND_REQUEST_TABLE + ";");
-            db.execSQL("DROP TABLE IF EXISTS " + Schema.NEWS_FEED_TABLE + ";");
+            db.execSQL("DROP TABLE IF EXISTS " + Schema.PAGE_NAME_TABLE + ";");
+            db.execSQL("DROP TABLE IF EXISTS " + Schema.POST_NAME_TABLE + ";");
+            db.execSQL("DROP TABLE IF EXISTS " + Schema.COMMENT_NAME_TABLE + ";");
             onCreate(db);
         }
     }

@@ -3,4 +3,5 @@
     <!-- DATABASE -->
     <string name="path_database">/data/data/%s/databases/</string>
     <string name="app_description"></string>
+    <string name="facebook_app_id">121705388180913</string>
 </resources>

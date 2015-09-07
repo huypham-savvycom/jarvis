@@ -28,5 +28,10 @@ public enum DatabaseManager {
     public SQLiteDatabase getWritableDatabase() {
         return mDbHelper.getWritableDatabase();
     }
+    public void clearAndStopData() {
+        mDbHelper.getWritableDatabase().delete(Schema.PAGE_NAME_TABLE, null, null);
+        mDbHelper.getWritableDatabase().delete(Schema.POST_NAME_TABLE, null, null);
+        mDbHelper.getWritableDatabase().delete(Schema.COMMENT_NAME_TABLE, null, null);
 
+    }
 }
