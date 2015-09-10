@@ -1,5 +1,6 @@
 package com.jarvis.android.navigationdrawers;
 
+import android.os.Bundle;
 import android.view.View;
 
 import com.blunderer.materialdesignlibrary.handlers.ActionBarDefaultHandler;
@@ -10,9 +11,35 @@ import com.blunderer.materialdesignlibrary.handlers.NavigationDrawerBottomHandle
 import com.blunderer.materialdesignlibrary.handlers.NavigationDrawerStyleHandler;
 import com.blunderer.materialdesignlibrary.handlers.NavigationDrawerTopHandler;
 import com.blunderer.materialdesignlibrary.models.Account;
+import com.facebook.AccessToken;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.jarvis.android.R;
+import com.jarvis.android.database.DatabaseManager;
+import com.jarvis.android.model.PageFacebook;
+import com.jarvis.android.model.PostComment;
+import com.jarvis.android.model.PostPage;
+import com.jarvis.android.ui.fragment.ListViewFragment;
+import com.jarvis.android.utils.GsonUtils;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class NavigationDrawerWithAccountsAndFullHeightActivity
         extends com.blunderer.materialdesignlibrary.activities.NavigationDrawerActivity {
+    private List<PageFacebook> pageFacebooks;
+//    private boolean check = true;
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        loadData(getNavigationDrawerAccountsHandler().getNavigationDrawerAccounts().get(1));
+    }
 
     @Override
     public NavigationDrawerStyleHandler getNavigationDrawerStyleHandler() {
@@ -21,29 +48,19 @@ public class NavigationDrawerWithAccountsAndFullHeightActivity
 
     @Override
     public NavigationDrawerAccountsHandler getNavigationDrawerAccountsHandler() {
-//        return new NavigationDrawerAccountsHandler(this)
-//                .addAccount("Blunderer", "blundererandroid@gmail.com",
-//                        R.drawable.profile1, R.drawable.profile1_background)
-//                .addAccount("Blunderer's cat", "cat@gmail.com",
-//                        R.drawable.profile2, R.drawable.profile2_background)
-//                .addAccount("Blunderer's dog", "dog@gmail.com",
-//                        R.drawable.profile3, R.color.cyan)
-//                .addAccount("Blunderer's monkey", "monkey@gmail.com",
-//                        R.drawable.profile4, R.color.gray);
-        return null;
+        pageFacebooks = DatabaseManager.DB.getAllPage();
+        NavigationDrawerAccountsHandler navigationDrawerAccountsHandler = new NavigationDrawerAccountsHandler(this);
+        for (PageFacebook pageFacebook : pageFacebooks) {
+            navigationDrawerAccountsHandler.addAccount(pageFacebook.getPageName(), pageFacebook.getPageId(), String.format("https://graph.facebook.com/%s/picture?access_token=%s", pageFacebook.getPageId(), AccessToken.getCurrentAccessToken().getToken()), R.color.hint_foreground_material_light);
+        }
+
+        return navigationDrawerAccountsHandler;
 
     }
 
     @Override
     public NavigationDrawerAccountsMenuHandler getNavigationDrawerAccountsMenuHandler() {
         return new NavigationDrawerAccountsMenuHandler(this)
-                .addAddAccount(new View.OnClickListener() {
-
-                    @Override
-                    public void onClick(View v) {
-                    }
-
-                })
                 .addManageAccounts(new View.OnClickListener() {
 
                     @Override
@@ -55,27 +72,19 @@ public class NavigationDrawerWithAccountsAndFullHeightActivity
 
     @Override
     public void onNavigationDrawerAccountChange(Account account) {
+        loadData(account);
+
     }
 
     @Override
     public NavigationDrawerTopHandler getNavigationDrawerTopHandler() {
-//        return new NavigationDrawerTopHandler(this)
-//                .addSection(R.string.fragment)
-//                .addItem(R.string.fragment_listview, new ListViewFragment())
-//                .addItem(R.string.fragment_scrollview, new ScrollViewFragment())
-//                .addItem(R.string.fragment_viewpager, new ViewPagerFragment())
-//                .addItem(R.string.fragment_viewpager_with_tabs, new ViewPagerWithTabsFragment())
-//                .addSection(R.string.activity)
-//                .addItem(R.string.start_activity,
-//                        new Intent(getApplicationContext(), ViewPagerActivity.class));
-        return null;
+        return new NavigationDrawerTopHandler(this)
+                .addItem(R.string.post, new ListViewFragment());
     }
 
     @Override
     public NavigationDrawerBottomHandler getNavigationDrawerBottomHandler() {
-        return new NavigationDrawerBottomHandler(this)
-                .addSettings(null)
-                .addHelpAndFeedback(null);
+        return null;
     }
 
     @Override
@@ -103,4 +112,74 @@ public class NavigationDrawerWithAccountsAndFullHeightActivity
         return new ActionBarDefaultHandler(this);
     }
 
+    private void loadData(final Account account) {
+        if (AccessToken.getCurrentAccessToken() != null) {
+            int j = 0;
+            while (j < 10000) {
+                GraphRequest request = GraphRequest.newGraphPathRequest(
+                        AccessToken.getCurrentAccessToken(), String.format("/%s/posts", account.getDescription()),
+                        new GraphRequest.Callback() {
+                            @Override
+                            public void onCompleted(GraphResponse response) {
+                                JSONObject result = response.getJSONObject();
+                                JSONArray data = result != null ? result.optJSONArray("data") : null;
+                                List<PostPage> postPages = new ArrayList<PostPage>();
+                                if (data == null || data.length() == 0) {
+                                    return;
+                                }
+                                for (int i = 0; i < data.length(); i++) {
+                                    try {
+                                        final PostPage postPage = GsonUtils.getGson().fromJson(data.get(i).toString(), PostPage.class);
+                                        postPage.setPageId(account.getDescription());
+                                        postPages.add(postPage);
+
+                                        GraphRequest request = GraphRequest.newGraphPathRequest(
+                                                AccessToken.getCurrentAccessToken(), "/comments",
+                                                new GraphRequest.Callback() {
+                                                    @Override
+                                                    public void onCompleted(GraphResponse graphResponse) {
+                                                        JSONObject result = graphResponse.getJSONObject();
+                                                        JSONObject commentData = result.optJSONObject(postPage.getPostId());
+                                                        JSONArray data = commentData != null ? commentData.optJSONArray("data") : null;
+                                                        List<PostComment> postComments = new ArrayList<PostComment>();
+                                                        if (data != null) {
+                                                            for (int i = 0; i < data.length(); i++) {
+                                                                try {
+                                                                    final PostComment postComment = GsonUtils.getGson().fromJson(data.get(i).toString(), PostComment.class);
+                                                                    postComment.setPostId(postPage.getPostId());
+                                                                    postComments.add(postComment);
+                                                                } catch (JSONException e) {
+                                                                    e.printStackTrace();
+                                                                }
+                                                            }
+                                                            if (!postComments.isEmpty()) {
+                                                                DatabaseManager.DB.saveOrUpdateCommentArray(postComments);
+                                                            }
+                                                        }
+                                                    }
+                                                });
+
+                                        Bundle parameters = new Bundle();
+                                        parameters.putString("ids", postPage.getPostId());
+                                        request.setParameters(parameters);
+                                        request.executeAsync();
+                                    } catch (JSONException e) {
+                                        e.printStackTrace();
+                                    }
+                                }
+                                if (!postPages.isEmpty()) {
+                                    DatabaseManager.DB.saveOrUpdatePostArray(postPages);
+                                }
+                            }
+                        });
+
+                Bundle parameters = new Bundle();
+                parameters.putString("limit", "100");
+                parameters.putString("offset", String.valueOf(j));
+                request.setParameters(parameters);
+                request.executeAsync();
+                j += 100;
+            }
+        }
+    }
 }

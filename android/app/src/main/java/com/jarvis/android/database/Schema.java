@@ -22,7 +22,7 @@ public class Schema {
     public static String CREATE_AT = "createdAt";
     public static String UPDATE_AT = "updatedAt";
     public static String CREATE_POST_TABLE = "CREATE TABLE post (PostID TEXT PRIMARY KEY UNIQUE, PostMessage TEXT, createdAt REAL,PageIDPost TEXT)";
-    //Table Post
+    //Table comment
     public static String COMMENT_NAME_TABLE = "comment";
     public static String COMMENT_ID = "CommentID";
     public static String POST_ID_COMMENT = "PostIDComment";
